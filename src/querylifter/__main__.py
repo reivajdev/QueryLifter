@@ -1,4 +1,4 @@
-from querylifter.application.cli import register_cli
+from application.cli import register_cli
 
 _app = register_cli()
 if __name__ == "__main__":

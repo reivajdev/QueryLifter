@@ -11,3 +11,9 @@ src/querylifter/command/__pycache__/hello.cpython-311.pyc
 src/querylifter/command/__pycache__/new.cpython-311.pyc
 src/querylifter/command/__pycache__/pepe.cpython-311.pyc
 src/querylifter/command/__pycache__/run.cpython-311.pyc
+venv
+venv/*
+build/*
+dist/querylifter.exe
+dist/querylifter.pyz
+src/querylifter/command/__pycache__/cmd_run.cpython-311.pyc

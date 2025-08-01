@@ -1,7 +1,7 @@
 from importlib import import_module
 from pkgutil import iter_modules
 from typer import Typer
-from querylifter import command
+import command
 
 def register_cli() -> Typer:
     app = Typer()
