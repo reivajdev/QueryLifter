@@ -1,0 +1,13 @@
+querylifter.pyz
+src/querylifter/__pycache__/__init__.cpython-311.pyc
+src/querylifter/__pycache__/__main__.cpython-311.pyc
+src/querylifter/application/__pycache__/__init__.cpython-311.pyc
+src/querylifter/application/__pycache__/app.cpython-311.pyc
+src/querylifter/application/__pycache__/cli.cpython-311.pyc
+src/querylifter/command/__pycache__/__init__.cpython-311.pyc
+src/querylifter/command/__pycache__/cmd_new.cpython-311.pyc
+src/querylifter/command/__pycache__/cmd-run.cpython-311.pyc
+src/querylifter/command/__pycache__/hello.cpython-311.pyc
+src/querylifter/command/__pycache__/new.cpython-311.pyc
+src/querylifter/command/__pycache__/pepe.cpython-311.pyc
+src/querylifter/command/__pycache__/run.cpython-311.pyc

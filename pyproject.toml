@@ -1,0 +1,24 @@
+[project]
+name = "querylifter"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Javier Cruz Herrera",email = "jcruherp@gobiernodecanarias.org"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer (>=0.16.0,<0.17.0)",
+    "rich (>=14.1.0,<15.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "querylifter", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+qlf = "querylifter.__main__:_app"
