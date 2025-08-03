@@ -1,0 +1,14 @@
+[package]
+name = "querylifter"
+version = "0.1.0"
+edition = "2024"
+authors = ["Javier Cruz Herrera"]
+license = "MIT" # o GPL-3.0, Apache-2.0, BSD-2-Clause, GPL-2.0-only, GPL-3.0-only
+description = "Mi aplicación CLI hecha en Rust que saluda al usuario."
+homepage = "https://mi-sitio.com/ayuda"  # O tu GitHub, Readme, etc.
+
+[dependencies]
+clap = { version = "4.5.42", features = ["derive"] }
+
+[package.metadata.wix]
+eula = false
