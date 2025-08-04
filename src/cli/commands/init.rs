@@ -2,8 +2,7 @@ use crate::cli::runnable::Runnable;
 use clap::Args;
 use crate::scaffold::config::{create_project_directory, create_subfolders, create_layer_folders,  create_deployrc };
 use crate::scaffold::layer::{Layer};
-use crate::scaffold::utils::{normalize_key};
-
+use crate::scaffold::utils::{layer_to_properties};
 
 #[derive(Args, Debug)]
 pub struct Init {
@@ -17,17 +16,11 @@ pub struct Init {
     pub envs: Vec<String>,
 }
 
-
 impl Runnable for Init {
     fn run(&self) {
         println!("Inicializando proyecto: {}", self.name);
 
-        let layers: Vec<Layer> = self.layers.iter()
-            .map(|name| Layer {
-                name: name.clone(),
-                key: normalize_key(name),
-            })
-            .collect();
+        let layers: Vec<Layer> = layer_to_properties(&self.layers);
 
         match create_project_directory(&self.name) {
             Ok(path) => {
