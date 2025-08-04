@@ -4,6 +4,7 @@ use std::collections::HashMap;
 use std::path::{Path, PathBuf};
 use tera::{Context, Tera};
 use crate::scaffold::layer::Layer;
+use std::path::MAIN_SEPARATOR;
 
 /// Crea la carpeta raíz del proyecto
 const DEPLOYRC_TEMPLATE: &str = include_str!("../../templates/.deployrc.tpl");
@@ -64,7 +65,7 @@ pub fn create_deployrc(
     envs: &[String],
 ) -> Result<(), Box<dyn std::error::Error>> {
     let mut context = Context::new();
-    context.insert("name", project_name);
+    context.insert("name", project_name.rsplit(MAIN_SEPARATOR).last().unwrap());
     context.insert("created_at", &Local::now().format("%Y-%m-%d").to_string());
     context.insert("layers", layers);
 

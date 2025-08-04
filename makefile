@@ -35,8 +35,8 @@ test:
 # --------------------------------
 
 run-init:
-	cargo run -- init --name ./test_project
+	cargo run -- init --name ./examples/test --layers 01.BronzeData,02.GolData --envs dev,pro
 
 # Borrar carpeta test_project generada por init
 clean-init:
-	rm -rf ./test_project
+	rm -rf ./examples/test
