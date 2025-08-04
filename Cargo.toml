@@ -9,6 +9,9 @@ homepage = "https://mi-sitio.com/ayuda"  # O tu GitHub, Readme, etc.
 
 [dependencies]
 clap = { version = "4.5.42", features = ["derive"] }
+chrono = "0.4"
+tera = "1.19.1"
+serde = { version = "1.0", features = ["derive"] }
 
 [package.metadata.wix]
 eula = false

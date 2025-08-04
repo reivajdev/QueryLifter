@@ -17,6 +17,13 @@ pub enum Command {
     Init {
         #[arg(short, long)]
         name: String,
+        /// Capas a crear (por defecto: BronzeData,SilverData,GoldData)
+        #[arg(long, value_delimiter = ',', default_value = "BronzeData,SilverData,GoldData")]
+        layers: Vec<String>,
+
+        /// Entornos a configurar (por defecto: dev,pre,pro)
+        #[arg(long, value_delimiter = ',', default_value = "dev,pre,pro")]
+        envs: Vec<String>,
     },
     Run {
         #[arg(short, long)]
@@ -29,10 +36,11 @@ pub enum Command {
 impl Runnable for Command {
     fn run(&self) {
         match self {
-            Command::Init { name } => Init {
-                name: name.clone(),
-            }
-            .run(),
+            Command::Init { name, layers, envs } => Init {
+                name: name.to_owned(),
+                layers: layers.clone(),
+                envs: envs.clone(),
+            }.run(),
             Command::Run { env, path } => Run {
                 env: env.clone(),
                 path: path.clone(),

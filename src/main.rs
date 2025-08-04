@@ -1,4 +1,5 @@
 mod cli;
+mod scaffold;
 use clap::Parser; 
 use cli::Cli;
 use cli::runnable::Runnable; 
