@@ -1,2 +1,6 @@
 /target
+/dist
+*/**/__pycache__
+**/**/__pycache__
+_pycache__
 /examples/test/.deployrc
